@@ -5,7 +5,7 @@ import aws_cdk as cdk
 
 from custom_vpc.custom_vpc_stack import CustomVpcStack
 
-
+from custom_vpc.config import config
 app = cdk.App()
 CustomVpcStack(app, "TaskVpc01",
     # If you don't specify 'env', this stack will be environment-agnostic.
@@ -20,7 +20,7 @@ CustomVpcStack(app, "TaskVpc01",
     # Uncomment the next line if you know exactly what Account and Region you
     # want to deploy the stack to. */
 
-    env=cdk.Environment(region='us-west-2'), stack_name = "TaskStack",
+    env=cdk.Environment(region=config["region"]), stack_name =config["stack"]["name"],  
 
     # For more information, see https://docs.aws.amazon.com/cdk/latest/guide/environments.html
     )
