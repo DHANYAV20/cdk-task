@@ -7,6 +7,11 @@ from aws_cdk import (
     aws_ec2 as ec2
 )
 from constructs import Construct
+config_file = "D:\23-2\cdk-project\cdk_project\config.json"
+import json
+with open(config_file, 'r') as myfile:
+    data=myfile.read()
+config = json.loads(data)
 
 class CustomVpcStack(Stack):
 
