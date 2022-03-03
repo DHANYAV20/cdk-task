@@ -73,5 +73,25 @@ config={
     "threshold":100,
     "evaluation_periods":3,
     "datapoints_to_alarm":2,
+},
+"sns":{
+    "display_name":"Konstone 24x7 on whatsapp support",
+    "topic_name":"KonstoneOpsTeam"
+},
+"rds":{
+    "database_name":"MyDatabase",
+    "allocated_storage":30, 
+    "port":3308, 
+    "multi_az":False, 
+    "instance_identifier":"publicSubnetInstance",
+    "instance_type":ec2.InstanceType.of(ec2.InstanceClass.BURSTABLE2, ec2.InstanceSize.SMALL),
+    "deletion_protection":False, 
+    "delete_automated_backups":True, 
+    "id":"RDS"
+},
+"alb":{
+    "id":"MyElb",
+    "internet_facing":False, 
+    "load_balancer_name":"FirstLoadBalancer",
 }
 }
