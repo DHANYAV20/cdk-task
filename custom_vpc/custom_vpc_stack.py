@@ -134,7 +134,7 @@ class CustomVpcStack(Stack):
         sns = _sns.Topic(self, "KonstoneTeam", display_name=config["sns"]["display_name"], topic_name=config["sns"]["topic_name"])
         
         #Add subscription to SNS topic
-        sns.add_subscription(_subs.EmailSubscription("dhanya.v@cloudplusinfotech.com"))
+        sns.add_subscription(_subs.EmailSubscription("xzy@gmail.com"))
         
 
         #Inform SNS on ec2 alarm state
